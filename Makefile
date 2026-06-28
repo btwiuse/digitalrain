@@ -6,7 +6,7 @@ tidy:
 	go mod tidy
 
 gopherjs:
-	gopherjs build .
+	gopherjs build -o digitalrain.js .
 
 wasm:
 	bash ./wasm/build.sh
