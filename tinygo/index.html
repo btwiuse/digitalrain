@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="data:,">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://w9y.up.railway.app/tinygo/wasm_exec.js"></script>
+	<script>
+	var go = new Go();
+	WebAssembly.instantiateStreaming(
+		fetch("https://w9y.up.railway.app/tinygo/github.com/btwiuse/digitalrain/wasm@master"),
+		go.importObject
+	).then(function (mod) {
+		go.run(mod.instance);
+	});
+	</script>
+</head>
+<body></body>
+</html>
